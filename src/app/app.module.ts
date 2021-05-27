@@ -5,14 +5,9 @@ import { AppComponent } from './app.component';
 import { YesNoButtonModule } from './shared/components/yes-no-button/yes-no-button.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    YesNoButtonModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, YesNoButtonModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

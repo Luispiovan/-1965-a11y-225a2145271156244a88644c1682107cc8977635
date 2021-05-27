@@ -8,9 +8,8 @@ describe('YesNoButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ YesNoButtonComponent ]
-    })
-    .compileComponents();
+      declarations: [YesNoButtonComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

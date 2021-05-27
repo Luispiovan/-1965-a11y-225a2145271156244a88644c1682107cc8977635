@@ -8,6 +8,8 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
+import { UniqueIdService } from '../../services/unique-id/unique-id.service';
+
 @Component({
   selector: 'app-yes-no-button',
   templateUrl: './yes-no-button.component.html',
@@ -25,11 +27,14 @@ export class YesNoButtonComponent implements OnInit, ControlValueAccessor {
   @Input() public label = '';
   @Output() public valueChange = new EventEmitter<string>();
 
+  public id: string = null;
   public option = YesNoButtonOptions;
   public onChange = (value: string) => {};
   public onTouched = () => {};
 
-  constructor() {}
+  constructor(private uniqueService: UniqueIdService) {
+    this.id = this.uniqueService.generateUniqueIdWithPrefix('yes-no-button-');
+  }
 
   ngOnInit(): void {}
 
